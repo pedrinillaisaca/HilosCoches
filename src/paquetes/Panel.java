@@ -17,9 +17,10 @@ public class Panel extends JPanel {
 	private int xC3,yC3;
 	private int xC4,yC4;
 	private String c1info,c2info,c3info,c4info;
+	private String c1Ave,c2Ave,c3Ave,c4Ave;
 	//private String pathC1;//,pathC2,pathC3,pathC4;		
 	public Panel(String [] params) {
-		setBackground(Color.BLUE);		
+		setBackground(Color.gray);		
 		this.coche1=Toolkit.getDefaultToolkit().getImage(params[0]);
 		this.coche2=Toolkit.getDefaultToolkit().getImage(params[1]);
 		this.coche3=Toolkit.getDefaultToolkit().getImage(params[2]);
@@ -57,15 +58,16 @@ public class Panel extends JPanel {
 		Font fon = new Font("Comic Sans MS", Font.BOLD, 25);
 		g2.setFont(fon);
 		
-		g2.drawString("Coche 1 vuelta numero:"+c1info, 20, 550);
-		g2.drawString("Coche 2 vuelta numero:"+c2info, 20, 575);
-		g2.drawString("Coche 3 vuelta numero:"+c3info, 20, 600);
-		g2.drawString("Coche 4 vuelta numero:"+c4info, 20, 625);
+		g2.drawString("Coche 1 vuelta numero:"+c1info+" numero de averias: "+c1Ave+" Color: Rojo", 20, 550);
+		g2.drawString("Coche 2 vuelta numero:"+c2info+" numero de averias: "+c2Ave+" Color: Azul", 20, 575);
+		g2.drawString("Coche 3 vuelta numero:"+c3info+" numero de averias: "+c3Ave+" Color: Amarillo", 20, 600);
+		g2.drawString("Coche 4 vuelta numero:"+c4info+" numero de averias: "+c4Ave+" Color: Verde", 20, 625);
 
 	}	
 
 	/**Set	 * */
 	public void setxC1(int xC1) {
+		
 		this.xC1 = xC1;
 	}
 
@@ -127,6 +129,26 @@ public class Panel extends JPanel {
 
 	public void setC4info(String c4info) {
 		this.c4info = c4info;
+	}
+
+	public void setC1Ave(String valueOf) {
+		this.c1Ave=valueOf;
+		
+	}
+	
+	public void setC2Ave(String valueOf) {
+		this.c2Ave=valueOf;
+		
+	}
+	
+	public void setC3Ave(String valueOf) {
+		this.c3Ave=valueOf;
+		
+	}
+	
+	public void setC4Ave(String valueOf) {
+		this.c4Ave=valueOf;
+		
 	}
 	
 	

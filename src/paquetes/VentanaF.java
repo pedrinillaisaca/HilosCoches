@@ -58,4 +58,24 @@ public class VentanaF extends JFrame{
 	public void setC4info(String c4info) {
 		this.p.setC4info(c4info);
 	}
+
+	public void setC1Ave(String valueOf) {
+		this.p.setC1Ave(valueOf);
+		
+	}
+	
+	public void setC2Ave(String valueOf) {
+		this.p.setC2Ave(valueOf);
+		
+	}
+	
+	public void setC3Ave(String valueOf) {
+		this.p.setC3Ave(valueOf);
+		
+	}
+	
+	public void setC4Ave(String valueOf) {
+		this.p.setC4Ave(valueOf);
+		
+	}
 }

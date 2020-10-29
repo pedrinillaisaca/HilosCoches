@@ -25,28 +25,32 @@ public class Escucha extends Thread{
 		while(true) {
 			try {
 				Thread.sleep(90);
-				System.out.println("Mov: "+ this.c2.getY()+" Averias: "+this.c2.getNum_av());
+				//System.out.println("Mov: "+ this.c2.getY()+" Averias: "+this.c2.getNum_av());
 				this.v.setxC1(this.c1.getX());//envio de datos a la ventana
 				this.v.setyC1(this.c1.getY());//envio de datos a la ventana	
 				this.v.setC1info(String.valueOf(this.c1.getNum_vueltas()));
+				this.v.setC1Ave(String.valueOf(this.c1.getNum_av()));
 				if(this.c1.getNum_vueltas()==5)
 					this.c1.interrupt();
 				
 				this.v.setxC2(this.c2.getX());//envio de datos a la ventana
 				this.v.setyC2(this.c2.getY());//envio de datos a la ventana
 				this.v.setC2info(String.valueOf(this.c2.getNum_vueltas()));
+				this.v.setC2Ave(String.valueOf(this.c2.getNum_av()));
 				if(this.c2.getNum_vueltas()==5)
 					this.c2.interrupt();
 				
 				this.v.setxC3(this.c3.getX());//envio de datos a la ventana
 				this.v.setyC3(this.c3.getY());//envio de datos a la ventana
 				this.v.setC3info(String.valueOf(this.c3.getNum_vueltas()));
+				this.v.setC3Ave(String.valueOf(this.c3.getNum_av()));
 				if(this.c3.getNum_vueltas()==5)
 					this.c3.interrupt();
 				
 				this.v.setxC4(this.c4.getX());//envio de datos a la ventana
 				this.v.setyC4(this.c4.getY());//envio de datos a la ventana
 				this.v.setC4info(String.valueOf(this.c4.getNum_vueltas()));
+				this.v.setC4Ave(String.valueOf(this.c4.getNum_av()));
 				if(this.c4.getNum_vueltas()==5)
 					this.c4.interrupt();
 				this.v.repaint();
